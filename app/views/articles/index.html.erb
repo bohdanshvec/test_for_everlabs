@@ -1,0 +1,17 @@
+<h1>All Articles</h1>
+
+<footer>
+  <%= Time.now%>
+</footer>
+
+<%= @articles.each do |article|%>
+  <h2><%= article.title %></h2>
+
+  <time datetime="<%= article.formated_created_at%>">
+    <%= article.formated_created_at %>
+  </time>
+
+  <p>
+    <%= article.body%>
+  </p>
+<% end %>
